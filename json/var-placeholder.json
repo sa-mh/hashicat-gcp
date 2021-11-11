@@ -1,0 +1,12 @@
+{
+  "data": {
+    "type":"vars",
+    "attributes": {
+      "key":"dog",
+      "value":"https://www.akc.org/wp-content/uploads/2017/11/Entlebucher-Mountain-Dog-puppy-laying-down-in-the-grass.jpg",
+      "category":"terraform",
+      "hcl":false,
+      "sensitive":false
+    }
+  }
+}
