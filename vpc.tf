@@ -1,15 +1,16 @@
-module "test-vpc-module" {
-  source       = "terraform-google-modules/network/google"
-  version      = "~> 3.2.0"
-  project_id   = var.project # Replace this with your project ID in quotes
-  network_name = "workshop-network"
-  mtu          = 1460
+module "vpc" {
+    source  = "terraform-google-modules/network/google"
+    version = "~> 3.0"
 
-  subnets = [
+    project_id   = var.project
+    network_name = "example-vpc"
+    routing_mode = "GLOBAL"
+
+    subnets = [
   {
-    subnet_name   = "workshop-subnet"
+    subnet_name   = "gaurav-subnet"
     subnet_ip     = "10.100.10.0/24"
     subnet_region = var.region
   }
-]
+	]
 }
