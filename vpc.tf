@@ -1,10 +1,10 @@
-module "vpc" {
-    source  = "terraform-google-modules/network/google"
-    version = "~> 3.0"
-
-    project_id   = var.project
-    network_name = "workshop-vpc"
-    routing_mode = "GLOBAL"
+module "network" {
+  source  = "terraform-google-modules/network/google"
+  version = "4.0.0"
+  # insert the 3 required variables here
+  network_name = "workshop-network"
+  project_id = var.project
+  
 
     subnets = [
   {
